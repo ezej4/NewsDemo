@@ -1,4 +1,4 @@
-import News from './';
+import News from '../pages';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { mockNews, mockCategoriesList } from '../test-utils/mocks';
 
