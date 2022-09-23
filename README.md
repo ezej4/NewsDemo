@@ -1,5 +1,5 @@
 
-# Rick and Morty challenge
+# News page demo
 
 ## A basic web app to show a news web site.
 
