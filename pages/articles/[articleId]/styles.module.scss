@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.main {
+  min-width: $mobile-min-width;
+  width: 100%;
+  margin: 24px auto;
+}
+
+@include for-big-mobile {
+    .main {
+      max-width: $desktop-min-width;
+      min-width: none;
+    }
+  }
+
+  
+@include for-desktop {
+  .main {
+    max-width: $desktop-max-width;
+    min-width: none;
+  }
+}

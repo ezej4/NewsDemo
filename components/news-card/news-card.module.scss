@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: $news-card-max-width-mobile;
+  width: 100%;
+  font-size: $title-thumbnail-font-size;
+  box-shadow: $spacing-xxs 5px 6px 0px rgb(184 184 184);
+
+  &,
+  &__image_container img {
+    border-radius: $spacing-xxs $spacing-xxs 0 0px;
+  }
+  &__image_container {
+    width: 100%;
+    height: $news-card-max-width-mobile;
+    position: relative;
+    display: flex;
+  }
+
+  &__content,
+  &__footer {
+    padding: $spacing-m;
+  }
+
+  &__content {
+    background: $bg-color;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $spacing-m;
+    text-transform: capitalize;
+    svg {
+      margin-right: $spacing-xxs;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    height: 32px;
+    max-width: $news-card-max-width-mobile;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: $title-thumbnail-font-size;
+    font-weight: bold;
+    color: $text-color;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__footer {
+    $footer-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    background: $footer-color;
+    border-top: 2px solid $body-color;
+    gap: 6px;
+  }
+
+  &__date_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__date {
+    margin-left: $spacing-xxs;
+    font-weight: bold;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-xxs;
+    border: 1px solid $body-color;
+    border-radius: $spacing-xxs;
+    background: $cta-color;
+    color: $bg-color;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+@include for-desktop {
+  .card {
+    max-width: $news-card-max-width-desktop;
+    &__footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+    }
+    &__button {
+      padding: 6px $spacing-m;
+      transition: all 0.5s ease;
+      &:hover {
+        color: $cta-color;
+        background: $bg-color;
+      }
+    }
+    &__image_container {
+      height: $news-card-max-width-desktop;
+    }
+
+    &__title {
+      max-width: $news-card-max-width-desktop;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.card_list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  justify-content: center;
+  grid-gap: 24px;
+  overflow: unset !important;
+}
+
+@include for-big-mobile {
+  .card_list {
+    grid-template-columns: repeat(2, minmax(min-content, $news-card-max-width-mobile));
+  }
+}
+
+@include for-desktop {
+  .card_list {
+    grid-template-columns: repeat(3, minmax(min-content, $news-card-max-width-mobile));
+  }
+}
+
+@include for-big-desktop {
+  .card_list {
+    grid-template-columns: repeat(4, minmax(min-content, $news-card-max-width-desktop));
+  }
+}

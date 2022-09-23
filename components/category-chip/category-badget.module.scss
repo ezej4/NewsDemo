@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.category_chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  width: min-content;
+  border-radius: 15px;
+  margin: 0 auto $spacing-m;
+  font-size: $description-font-size;
+  background: $cta-color;
+  color: $bg-color;
+  font-weight: bold;
+  
+  &__icon {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: rgba($text-color, 0.6);
+    margin-left: $spacing-xxs * 2;
+
+    &_1,
+    &_2 {
+      position: absolute;
+      left: 5px;
+      top: $spacing-m;
+      width: 15px;
+      height: 2px;
+      background-color: $bg-color;
+    }
+
+    &_1 {
+      transform: rotate(40deg);
+    }
+
+    &_2 {
+      transform: rotate(-40deg);
+    }
+  }
+}
