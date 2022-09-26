@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['localhost', 'placeimg.com'],
+    domains: ['localhost', 'placeimg.com', 'news-demo-i3qs.vercel.app'],
   },
 };
 

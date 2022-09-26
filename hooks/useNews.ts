@@ -12,9 +12,13 @@ interface IUseNews {
 }
 
 /**
- * Hook to get news from the server and filter them by category and sort them by date or views also you can get the data by segments
- * @param param0
- * @returns
+ * Hook to get news from the server and filter them by category and sort them by date or views
+ * also the news are going to be segmented by the amount of news per page
+ * @param initialNews initial news to show
+ * @param category category to filter the news
+ * @param orderBy sort the news by date or views
+ * @returns news, amountOfNews, filterCategory, totalOfItems, filterByCategory, orderNewsByDate, orderNewsByViews, loadMoreNews, resetFilters
+ * 
  */
 const useNews = ({ initialNews, category, orderBy }: IUseNews) => {
   const [newsList, setNewsList] = useState(initialNews);
